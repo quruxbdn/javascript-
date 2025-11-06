@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ubah Daahir Omar | JavaScript Learning</title>
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <h1>Ubah Daahir Omar</h1>
+      <p class="subtitle">JavaScript Learning journey</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="#" onclick="showSection('home')"> Home</a></li>
+        <li><a href="#" onclick="showSection('chapters')">Chapters</a></li>
+        <li><a href="#" onclick="showSection('assignments')"> Assignments</a></li>
+        <li><a href="#" onclick="showSection('useraccount')"> User Account</a></li>
+        <li><a href="#" onclick="showSection('about')">👤 About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT AREA -->
+  <div class="main-content" id="mainContent">
+    <!-- Home Section -->
+    <section id="home-section" class="content-section active">
+      <div class="container">
+        <div class="welcome-content">
+          <h2>Welcome to My JavaScript Journey</h2>
+          <p class="welcome-text">Hi! I'm <strong>Ubah Daahir Omar</strong>, and I'm excited to share my JavaScript learning journey with you.</p>
+          <p class="description">This platform im currently exploring the world of javascript learning step by step to turn my ideas into interactive code.</p>
+          
+          <div class="image-wrapper">
+            <img src="./WhatsApp Image 2025-11-02 at 16.38.28_85accf5b.jpg" alt="Background Image" class="bg-image">
+          </div>
+          
+          <div class="info-boxes">
+            <div class="info-box">
+              <h3> Chapters</h3>
+              <p>Learn JavaScript fundamentals from basics to advanced topics</p>
+            </div>
+            <div class="info-box">
+              <h3> Assignments</h3>
+              <p>Practice with hands-on exercises and real-world examples</p>
+            </div>
+            <div class="info-box">
+              <h3>🎓 about me</h3>
+              <p><strong>Student:</strong> Ubah Daahir Omar (C6240421)<br>
+                 <strong>Subject:</strong> JavaScript Code<br>
+                 <strong>Instructor:</strong> Jamilla Hassan Mohamett<br>
+                 <strong>Institution:</strong> JUST University</p>
+            </div>
+          </div>
+          
+          <div class="cta-section">
+            <h3>Ready to start learning?</h3>
+            <p>Click on any section above to begin your JavaScript journey!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section id="chapters-section" class="content-section" style="display:none;">
+      <div class="container">
+        <h2>Select a Chapter</h2>
+        <div class="grid-container">
+          <div class="grid-item" onclick="openChapter('chapter1')">
+            <h3>Chapter 1</h3>
+            <p>intordection </p>
+          </div>
+          <div class="grid-item" onclick="openChapter('chapter2.1')">
+            <h3>Chapter 2</h3>
+            <p>Variables & Operators</p>
+          </div>
+          <div class="grid-item" onclick="openChapter('chapter2')">
+            <h3>Chapter 2</h3>
+            <p>If-Else Statements</p>
+          </div>
+          <div class="grid-item" onclick="openChapter('chapter3')">
+            <h3>Chapter 3</h3>
+            <p>Decision Structures</p>
+          </div>
+          <div class="grid-item" onclick="openChapter('chapter4')">
+            <h3>Chapter 4</h3>
+            <p>Repetition Structures</p>
+          </div>
+        </div>
+        <div id="chapterContent" class="content-box"></div>
+      </div>
+    </section>
+
+    <!-- Assignments Section -->
+    <section id="assignments-section" class="content-section" style="display:none;">
+      <div class="container">
+        <h2>📝 Select an Assignment</h2>
+        <div class="grid-container">
+          <div class="grid-item" onclick="openChapter('assignment')">
+            <h3>Assignment 1</h3>
+            <p>User Account Creation</p>
+          </div>
+          <div class="grid-item" onclick="openChapter('assignment1')">
+            <h3>Assignment 2</h3>
+            <p>Operators</p>
+          </div>
+          <div class="grid-item" onclick="openChapter('assignment2')">
+            <h3>Assignment 3</h3>
+            <p>If-Else Statements</p>
+          </div>
+        </div>
+        <div id="assignmentContent" class="content-box"></div>
+      </div>
+    </section>
+
+    <!-- User Account Section -->
+    <section id="useraccount-section" class="content-section" style="display:none;">
+      <div class="container">
+        <h2>Create User Account</h2>
+        <div class="form-container">
+          <form id="signupForm">
+            <input type="text" id="fullname" placeholder="Full Name" required>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <input type="button" value="Create Account" onclick="createUser()" class="submit-btn">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-section" class="content-section" style="display:none;">
+      <div id="about">
+        <h2>Student Information</h2>
+        <div class="card">
+          <img src="WhatsApp Image 2025-11-02 at 16.38.28_a68d2af8.jpg" alt="Profile Photo">
+          <p><strong>Name:</strong> Ubah Daahir Omar</p>
+          <p><strong>ID:</strong> C6240421</p>
+          <p><strong>Subject:</strong> JavaScript Code</p>
+          <p><strong>Teacher:</strong> Jamilla Hassan Mohamett</p>
+          <p><strong>Date:</strong> 29/Oct/2025</p>
+          <p><strong>Email:</strong>qurxbdn82@gmail.com</p>
+        </div>
+        <div class="about-footer">JUST University</div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Ubah Daahir Omar - JavaScript Learning journey</p>
+      <p class="footer-subtitle">JUST University - All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
